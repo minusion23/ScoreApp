@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ScoreApp</string>
+    <string name="home_team">home Team</string>
+    <string name="away_team">Away Team</string>
+    <string name="t">T</string>
+    <string name="numberValue">0</string>
+    <string name="attack">Attack</string>
+    <string name="block">Block</string>
+    <string name="ace">Ace</string>
+    <string name="opp_error">Opp. Error</string>
+    <string name="set">Set</string>
+    <string name="reset">Reset</string>
+    <string name="restart">Restart</string>
+    <string name="sets">sets</string>
+    <string name="set_1">SET 1</string>
+    <string name="stats">Stats</string>
+    <string name="back">Back</string>
+    <string name="total">Total</string>
+</resources>
