@@ -56,7 +56,7 @@
                 style="@style/CustomButtonStyle"
                 android:layout_marginLeft="@dimen/tButtonMargin"
                 android:onClick="callTimeOutA"
-                android:text="@string/t" />
+                android:text="@string/t"/>
 
             <TextView
                 android:id="@+id/t2"
@@ -88,7 +88,7 @@
                 style="@style/CustomButtonStyle"
                 android:layout_marginRight="@dimen/tButtonMargin"
                 android:onClick="callTimeOutB"
-                android:text="@string/t" />
+                android:text="@string/t"/>
 
         </LinearLayout>
 
@@ -200,7 +200,7 @@
                     android:layout_marginRight="@dimen/standardMargin"
                     android:layout_marginTop="@dimen/smallMargin"
                     android:onClick="attackTeamA"
-                    android:text="@string/attack" />
+                    android:text="@string/attack"/>
 
                 <Button
                     style="@style/ActionButtonStyle"

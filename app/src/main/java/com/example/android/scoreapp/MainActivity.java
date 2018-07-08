@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-
-
 public class MainActivity extends AppCompatActivity {
     int scoreTeamA = 0;
     int scoreTeamB = 0;
@@ -63,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
         outState.putInt("blockTeamBTemp", blockTeamBTemp);
         outState.putInt("aceTeamBTemp", aceTeamBTemp);
         outState.putInt("oppErrorTeamBTemp", oppErrorTeamBTemp);
-
     }
+
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
@@ -99,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         displayTimeOutForTeamA(setTeamA);
         displayTimeOutTeamB(setTeamB);
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -108,40 +107,47 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Displays the given score for Team A.
      */
+
     public void displayForTeamA(int scoreTeamA) {
         TextView scoreView = findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(scoreTeamA));
     }
+
     /**
      * Displays the given score for Team B.
      */
+
     public void displayForTeamB(int scoreTeamB) {
         TextView scoreView = findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(scoreTeamB));
     }
+
     /**
      * Displays the set score for Team A.
      */
+
     public void displaySetForTeamA(int setTeamA) {
         TextView scoreView = findViewById(R.id.team_a_set);
         scoreView.setText(String.valueOf(setTeamA));
     }
+
     /**
      * Displays the set score for Team B.
      */
+
     public void displaySetForTeamB(int setTeamB) {
         TextView scoreView = findViewById(R.id.team_b_set);
         scoreView.setText(String.valueOf(setTeamB));
-
-        /**
-         * Displays number of timeouts taken by Team A.
-         */
     }
+
+    /**
+     * Displays number of timeouts taken by Team A.
+     */
+
     public void displayTimeOutForTeamA(int timeOutA) {
         TextView scoreView = findViewById(R.id.t2);
         scoreView.setText(String.valueOf(timeOutA));
     }
-
 
     public void displayTimeOutTeamB(int timeOutB) {
         TextView scoreView = findViewById(R.id.t3);
@@ -149,15 +155,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Changes the number of timeouts taken by Team B.
+     * Changes the number of timeouts taken by Team A.
      */
-    public void callTimeOutA (View view){
+
+    public void callTimeOutA(View view) {
         timeOutA = timeOutA + 1;
-        displayTimeOutForTeamA (timeOutA);
+        displayTimeOutForTeamA(timeOutA);
     }
 
-
-    public void callTimeOutB (View view) {
+    public void callTimeOutB(View view) {
         timeOutB = timeOutB + 1;
         displayTimeOutTeamB(timeOutB);
     }
@@ -173,22 +179,27 @@ public class MainActivity extends AppCompatActivity {
         attackTeamATemp = attackTeamATemp + 1;
         displayForTeamA(scoreTeamA);
     }
+
     public void blockTeamA(View view) {
         TextView scoreView = findViewById(R.id.team_a_score);
         scoreTeamA = scoreTeamA + 1;
         blockTeamATemp = blockTeamATemp + 1;
         displayForTeamA(scoreTeamA);
     }
+
     public void aceTeamA(View view) {
         TextView scoreView = findViewById(R.id.team_a_score);
         scoreTeamA = scoreTeamA + 1;
         aceTeamATemp = aceTeamATemp + 1;
-        displayForTeamA(scoreTeamA);}
+        displayForTeamA(scoreTeamA);
+    }
+
     public void oppErrorTeamA(View view) {
         TextView scoreView = findViewById(R.id.team_a_score);
         scoreTeamA = scoreTeamA + 1;
         oppErrorTeamATemp = oppErrorTeamATemp + 1;
-        displayForTeamA(scoreTeamA);}
+        displayForTeamA(scoreTeamA);
+    }
 
     /**
      * Adds the number of sets won for Team A by 1, resets the number of points scored,
@@ -205,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
         attackTeamATemp = 0;
         attackTeamB = attackTeamB + attackTeamBTemp;
         attackTeamBTemp = 0;
-        blockTeamA = blockTeamA+ blockTeamATemp;
+        blockTeamA = blockTeamA + blockTeamATemp;
         blockTeamATemp = 0;
         blockTeamB = blockTeamB + blockTeamBTemp;
         blockTeamBTemp = 0;
@@ -222,9 +233,8 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamA(scoreTeamA);
         displayForTeamB(scoreTeamB);
         displaySetForTeamA(setTeamA);
-        displayTimeOutForTeamA (timeOutA);
-        displayTimeOutTeamB (timeOutB);
-
+        displayTimeOutForTeamA(timeOutA);
+        displayTimeOutTeamB(timeOutB);
     }
 
     public void attackTeamB(View view) {
@@ -233,22 +243,27 @@ public class MainActivity extends AppCompatActivity {
         attackTeamBTemp = attackTeamBTemp + 1;
         displayForTeamB(scoreTeamB);
     }
+
     public void blockTeamB(View view) {
         TextView scoreView = findViewById(R.id.team_b_score);
         scoreTeamB = scoreTeamB + 1;
         blockTeamBTemp = blockTeamBTemp + 1;
         displayForTeamB(scoreTeamB);
     }
+
     public void aceTeamB(View view) {
         TextView scoreView = findViewById(R.id.team_b_score);
         scoreTeamB = scoreTeamB + 1;
         aceTeamBTemp = aceTeamBTemp + 1;
-        displayForTeamB(scoreTeamB);}
+        displayForTeamB(scoreTeamB);
+    }
+
     public void oppErrorTeamB(View view) {
         TextView scoreView = findViewById(R.id.team_b_score);
         scoreTeamB = scoreTeamB + 1;
-        oppErrorTeamBTemp = oppErrorTeamBTemp +1;
-        displayForTeamB(scoreTeamB);}
+        oppErrorTeamBTemp = oppErrorTeamBTemp + 1;
+        displayForTeamB(scoreTeamB);
+    }
 
     public void setTeamB(View view) {
         TextView scoreView = findViewById(R.id.team_b_set);
@@ -279,38 +294,50 @@ public class MainActivity extends AppCompatActivity {
         displayTimeOutForTeamA(timeOutA);
         displayTimeOutTeamB(timeOutB);
     }
+
     /**
      * Resets the scores in the set and time outs taken. Using the temporary integers makes sure
      * that the points accumulated before the reset are not taken into account for the stats while
      * the stats for the previous sets are saved
      */
-    public void reset (View view){
+
+    public void reset(View view) {
         scoreTeamA = 0;
         scoreTeamB = 0;
         timeOutA = 0;
-        timeOutB = 0 ;
+        timeOutB = 0;
+        attackTeamATemp = 0;
+        blockTeamATemp = 0;
+        aceTeamATemp = 0;
+        oppErrorTeamATemp = 0;
+        attackTeamBTemp = 0;
+        blockTeamBTemp = 0;
+        aceTeamBTemp = 0;
+        oppErrorTeamBTemp = 0;
         displayForTeamB(scoreTeamB);
         displayForTeamA(scoreTeamA);
-        displayTimeOutForTeamA (timeOutA);
-        displayTimeOutTeamB (timeOutB);
+        displayTimeOutForTeamA(timeOutA);
+        displayTimeOutTeamB(timeOutB);
     }
+
     /**
      * Restarts the game and resets all the variables including any stat variables
      */
-    public void restart (View view){
-        scoreTeamA = 0 ;
-        scoreTeamB = 0 ;
-        setTeamA = 0 ;
-        setTeamB = 0 ;
-        timeOutA = 0 ;
-        timeOutB = 0 ;
+
+    public void restart(View view) {
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+        setTeamA = 0;
+        setTeamB = 0;
+        timeOutA = 0;
+        timeOutB = 0;
         displayForTeamB(scoreTeamB);
         displaySetForTeamB(setTeamB);
         displaySetForTeamB(setTeamB);
         displayForTeamA(scoreTeamA);
         displaySetForTeamA(setTeamA);
-        displayTimeOutForTeamA (timeOutA);
-        displayTimeOutTeamB (timeOutB);
+        displayTimeOutForTeamA(timeOutA);
+        displayTimeOutTeamB(timeOutB);
         scoreTeamA = 0;
         scoreTeamB = 0;
         setTeamA = 0;
@@ -324,31 +351,26 @@ public class MainActivity extends AppCompatActivity {
         aceTeamB = 0;
         oppErrorTeamB = 0;
     }
+
     /**
      * Initiates a new activity that opens a new window with the stats for the game for any finished
-     * set. Moves the integers from the main activity where the stats are kept to the new activty
+     * set. Moves the integers from the main activity where the stats are kept to the new activity
      */
-        public void stats(View view) {
-            totalScoreA =  attackTeamA + blockTeamA + aceTeamA + oppErrorTeamA ;
-            totalScoreB =  attackTeamB + blockTeamB + aceTeamB + oppErrorTeamB;
-        Intent intent =  new Intent(this, com.example.android.scoreapp.stats.class);
-            intent.putExtra("attackTeamA", attackTeamA);
-            intent.putExtra("attackTeamB", attackTeamB);
-            intent.putExtra("blockTeamA ", blockTeamA);
-            intent.putExtra("blockTeamB", blockTeamB);
-            intent.putExtra("aceTeamA ", aceTeamA );
-            intent.putExtra("aceTeamB", aceTeamB);
-            intent.putExtra("oppErrorTeamA", oppErrorTeamA);
-            intent.putExtra("oppErrorTeamB", oppErrorTeamB);
-            intent.putExtra("totalScoreA", totalScoreA);
-            intent.putExtra("totalScoreB", totalScoreB);
 
-                 startActivity(intent);
-
-
-        }
-
-
-
-
+    public void stats(View view) {
+        totalScoreA = attackTeamA + blockTeamA + aceTeamA + oppErrorTeamA;
+        totalScoreB = attackTeamB + blockTeamB + aceTeamB + oppErrorTeamB;
+        Intent intent = new Intent(this, com.example.android.scoreapp.stats.class);
+        intent.putExtra("attackTeamA", attackTeamA);
+        intent.putExtra("attackTeamB", attackTeamB);
+        intent.putExtra("blockTeamA ", blockTeamA);
+        intent.putExtra("blockTeamB", blockTeamB);
+        intent.putExtra("aceTeamA ", aceTeamA);
+        intent.putExtra("aceTeamB", aceTeamB);
+        intent.putExtra("oppErrorTeamA", oppErrorTeamA);
+        intent.putExtra("oppErrorTeamB", oppErrorTeamB);
+        intent.putExtra("totalScoreA", totalScoreA);
+        intent.putExtra("totalScoreB", totalScoreB);
+        startActivity(intent);
+    }
 }
